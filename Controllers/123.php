@@ -1,6 +1,4 @@
-
 <?php
-
 require_once "classes/Categorias.class.php";
 require_once "classes/Itens.class.php";
 require_once "classes/Produto.class.php";
@@ -12,10 +10,8 @@ $usuario = new Usuarios(1);
 $usuario->setNome("João");
 $usuario->setEmail("joao@email.com");
 $usuario->setSenha("123456");
-$usuario->setPerfil("Cliente");
-
+$usuario->setPerfil("Comprador");
 ?>
-
 
 <!DOCTYPE html>
 <html>
@@ -28,23 +24,21 @@ $usuario->setPerfil("Cliente");
 
 <table border="1">
     <tr>
-       <th>ID</th> 
-       <th>Nome</th> 
-       <th>Email</th> 
-       <th>Senha</th> 
-       <th>Perfil</th> 
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Email</th>
+        <th>Senha</th>
+        <th>Perfil</th>
     </tr>
+
     <tr>
-        <td><?= $usuario->getId_usuario(); ?></td> 
-        <td><?= $usuario->getNome(); ?></td> 
-        <td><?= $usuario->getEmail(); ?></td> 
-        <td><?= $usuario->getSenha(); ?></td> 
-        <td><?= $usuario->getPerfil(); ?></td> 
+        <td><?= $usuario->getId_usuario(); ?></td>
+        <td><?= $usuario->getNome(); ?></td>
+        <td><?= $usuario->getEmail(); ?></td>
+        <td><?= $usuario->getSenha(); ?></td>
+        <td><?= $usuario->getPerfil(); ?></td>
     </tr>
 </table>
 
 </body>
 </html>
-
-
-
