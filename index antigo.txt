@@ -1,0 +1,50 @@
+
+<?php
+
+require_once "Models/Categorias.class.php";
+require_once "Models/Itens.class.php";
+require_once "Models/Produto.class.php";
+require_once "Models/Usuarios.class.php";
+require_once "Models/Vendas.class.php";
+
+$usuario = new Usuarios(1);
+
+$usuario->setNome("João");
+$usuario->setEmail("joao@email.com");
+$usuario->setSenha("123456");
+$usuario->setPerfil("Cliente");
+
+?>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dados do Usuário</title>
+</head>
+<body>
+
+<h2>Informações do Usuário</h2>
+
+<table border="1">
+    <tr>
+       <th>ID</th> 
+       <th>Nome</th> 
+       <th>Email</th> 
+       <th>Senha</th> 
+       <th>Perfil</th> 
+    </tr>
+    <tr>
+        <td><?= $usuario->getId_usuario(); ?></td> 
+        <td><?= $usuario->getNome(); ?></td> 
+        <td><?= $usuario->getEmail(); ?></td> 
+        <td><?= $usuario->getSenha(); ?></td> 
+        <td><?= $usuario->getPerfil(); ?></td> 
+    </tr>
+</table>
+
+</body>
+</html>
+
+
+
